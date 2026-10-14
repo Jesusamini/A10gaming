@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0e">
+<meta name="description" content="A10 Gaming — جامعه گیمینگ و سرور Counter-Strike 1.6">
+<title>A10 | CS 1.6 Gaming</title>
+<style>
+:root{--bg:#09090c;--panel:#121217;--red:#f3293e;--muted:#a7a7b2;--line:#282830}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f7f7fa;font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#09090ceF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:28px;font-weight:900;letter-spacing:1px}.brand span{color:var(--red)}nav{display:flex;gap:24px;color:#d5d5dc;font-size:14px}nav a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--red);background:var(--red);color:white;padding:11px 18px;border-radius:8px;font-weight:bold;cursor:pointer;transition:.2s;font-family:inherit}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #f3293e33}.btn.ghost{background:transparent;color:#fff}
+.hero{position:relative;overflow:hidden;padding:88px 0 80px;background:radial-gradient(ellipse at 75% 20%,#f3293e22,transparent 42%),linear-gradient(120deg,#0b0b0e,#111116 60%,#160b10);border-bottom:1px solid var(--line)}
+.hero:after{content:"A10";position:absolute;left:-25px;bottom:-105px;font-size:clamp(180px,32vw,400px);font-weight:1000;letter-spacing:-20px;color:#ffffff05;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:44px;position:relative;z-index:1}.eyebrow{color:var(--red);font-weight:bold;font-size:13px;letter-spacing:2px}.hero h1{font-size:clamp(38px,5vw,66px);line-height:1.25;margin:14px 0}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);max-width:570px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.visual{min-height:310px;border:1px solid #3a2028;border-radius:18px;background:linear-gradient(145deg,#19191f,#0c0c10);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 20px 70px #0008}.visual:before,.visual:after{content:"";position:absolute;width:240px;height:240px;border:1px solid #f3293e44;transform:rotate(45deg)}.visual:after{width:170px;height:170px}.emblem{font-size:94px;font-weight:1000;color:white;text-shadow:0 0 30px #f3293e66;z-index:1}.emblem span{color:var(--red)}.visual small{position:absolute;bottom:18px;color:#85858f;letter-spacing:4px;font-size:10px}
+section{padding:68px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{font-size:30px;margin:0}.section-head p{color:var(--muted);margin:5px 0 0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.icon{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;background:#f3293e18;color:var(--red);font-size:22px;margin-bottom:14px}.card h3{margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}
+.server{display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;background:linear-gradient(110deg,#171116,#121217);border:1px solid #51212a;border-radius:16px;padding:26px}.status{display:flex;align-items:center;gap:8px;color:#8ef0b0;font-size:13px}.dot{width:8px;height:8px;border-radius:50%;background:#54dc83;box-shadow:0 0 12px #54dc83}.ip{font-size:clamp(18px,3vw,26px);font-weight:bold;direction:ltr;text-align:right;letter-spacing:1px}.server p{color:var(--muted);margin:6px 0 0;font-size:14px}.server-actions{display:flex;gap:10px;flex-wrap:wrap}
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.rule{background:#101014;border:1px solid var(--line);padding:16px;border-radius:10px;display:flex;gap:12px}.rule b{color:var(--red)}.rule p{margin:0;color:#d0d0d8;font-size:14px}
+.community{background:linear-gradient(120deg,#191015,#101014);border:1px solid var(--line);border-radius:16px;padding:36px;text-align:center}.community h2{font-size:30px;margin:0 0 8px}.community p{color:var(--muted);margin:0 auto 22px;max-width:620px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#85858f;font-size:12px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.notice{display:none;margin-top:12px;color:#8ef0b0;font-size:13px}.notice.show{display:block}
+@media(max-width:760px){.nav{height:auto;min-height:70px;flex-wrap:wrap;padding:12px 0}nav{order:3;width:100%;justify-content:space-between;gap:10px;font-size:12px}.nav>.btn{padding:8px 12px}.hero{padding:60px 0}.hero-grid{grid-template-columns:1fr;gap:28px}.visual{min-height:220px}.cards{grid-template-columns:1fr}.section-head{display:block}.server{grid-template-columns:1fr}.server-actions{margin-top:8px}.rules{grid-template-columns:1fr}.community{padding:26px 18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home">A<span>10</span></a>
+<nav><a href="#home">خانه</a><a href="#server">سرور</a><a href="#features">امکانات</a><a href="#rules">قوانین</a><a href="#community">ارتباط با ما</a></nav>
+<a class="btn" href="#server">ورود به سرور</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div><div class="eyebrow">A10 GAMING COMMUNITY</div><h1>اینجا میدانِ <span>رقابت</span> است.</h1><p>به جامعه گیمینگ A10 خوش اومدی؛ جایی برای میکس‌های هیجان‌انگیز، رقابت سالم و پلیرهای واقعی Counter-Strike 1.6.</p><div class="actions"><a class="btn" href="#server">مشاهده اطلاعات سرور</a><a class="btn ghost" href="#rules">قوانین سرور</a></div></div>
+<div class="visual" aria-label="نشان گرافیکی A10"><div class="emblem">A<span>10</span></div><small>COUNTER-STRIKE 1.6</small></div>
+</div></section>
+<section id="server"><div class="wrap"><div class="section-head"><div><h2>سرور A10</h2><p>اطلاعات اتصال و وضعیت سرور</p></div><span class="status"><i class="dot"></i> وضعیت: نیازمند تنظیم</span></div>
+<div class="server"><div><div class="ip" id="serverIp">IP:PORT را اینجا وارد کن</div><p>آدرس واقعی سرور هنوز در سایت تنظیم نشده است. بعد از وارد کردن IP و پورت، این بخش آماده استفاده می‌شود.</p></div><div class="server-actions"><button class="btn" onclick="copyIP()">کپی آدرس</button><a class="btn ghost" href="#community">دریافت اطلاعات</a></div><div class="notice" id="copyNotice">آدرس کپی شد.</div></div>
+</div></section>
+<section id="features"><div class="wrap"><div class="section-head"><div><h2>چرا A10؟</h2><p>برای بازی بهتر، رقابت سالم‌تر و جامعه قوی‌تر</p></div></div><div class="cards">
+<article class="card"><div class="icon">⚔</div><h3>میکس و رقابت</h3><p>محیطی برای رقابت تیمی و تجربه بازی کنار پلیرهای فعال.</p></article>
+<article class="card"><div class="icon">🛡</div><h3>بازی منصفانه</h3><p>رعایت قوانین و گزارش تخلف‌ها به مدیریت کمک می‌کند کیفیت بازی حفظ شود.</p></article>
+<article class="card"><div class="icon">🎯</div><h3>جامعه پلیرها</h3><p>با فعالیت مستمر در جامعه A10 شناخته شو و در کنار بقیه پیشرفت کن.</p></article>
+</div></div></section>
+<section id="rules"><div class="wrap"><div class="section-head"><div><h2>قوانین اصلی</h2><p>برای اینکه بازی برای همه لذت‌بخش بماند</p></div></div><div class="rules">
+<div class="rule"><b>01</b><p>استفاده از چیت و هرگونه ابزار ناعادلانه ممنوع است.</p></div>
+<div class="rule"><b>02</b><p>به پلیرها و اعضای مدیریت احترام بگذارید؛ توهین و حاشیه‌سازی ممنوع.</p></div>
+<div class="rule"><b>03</b><p>برای حضور در میکس، قوانین و شرایط اعلام‌شده مدیریت را رعایت کنید.</p></div>
+<div class="rule"><b>04</b><p>در صورت مشاهده تخلف، موضوع را همراه با مدرک به مدیریت گزارش دهید.</p></div>
+</div></div></section>
+<section id="community"><div class="wrap"><div class="community"><h2>به جمع A10 بپیوند</h2><p>لینک دیسکورد، تلگرام یا راه ارتباطی سرور را در نسخه نهایی اینجا قرار بده تا پلیرها مستقیم به جامعه شما وصل شوند.</p><a class="btn" href="https://t.me/" target="_blank" rel="noopener">ورود به تلگرام</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© A10 Gaming — تمامی حقوق محفوظ است.</span><span>ساخته‌شده برای جامعه CS 1.6</span></div></footer>
+<script>
+function copyIP(){const ip=document.getElementById('serverIp').textContent.trim();if(ip.includes('IP:PORT')){document.getElementById('copyNotice').textContent='ابتدا IP و پورت واقعی سرور را تنظیم کن.';document.getElementById('copyNotice').classList.add('show');return;}navigator.clipboard.writeText(ip).then(()=>{document.getElementById('copyNotice').textContent='آدرس کپی شد.';document.getElementById('copyNotice').classList.add('show')}).catch(()=>{document.getElementById('copyNotice').textContent='کپی خودکار ممکن نیست؛ آدرس را دستی انتخاب کن.';document.getElementById('copyNotice').classList.add('show')})}
+</script>
+</body></html>
